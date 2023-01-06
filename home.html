@@ -1,0 +1,109 @@
+<!-- right names for semantic elements
+display svg icons 
+notification bell round
+(today's date)
+(dates for homework)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">      
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-body">
+    <nav class="first-column">
+        <h1 class="logo">GradeHub</h1>
+        <ul class="menu">
+            <li class="menu-home"><a href="home.html">Home</a></li>
+            <li class="menu-grades"><a href="grades.html">Grades</a></li>
+            <li class="menu-calculator"><a href="calculator.html">Calculator</a></li>
+            <li class="menu-contacts"><a href="contacts.html">Contacts</a></li>
+        </ul>
+        <a class="btn" href="index.html">SIGN OUT</a>
+    </nav>
+    <main class="second-column">
+        <h1 class="head-title">Welcome back, <span class="head-title" id="welcome-name"></span>!</h1>
+        <div class="second-column-sections">
+            <section class="personal-information-section">
+                <h2 class="subheading">Personal Information</h2>
+                <div class="personal-information-container">
+                    <img src="img/Profile.png" alt="profile picture" width="110em"> <!-- css style -->
+                    <table>
+                        <tr>
+                        <td>Name</td>
+                        <td id="personal-information-name"></td>
+                        </tr>
+                        <tr>
+                        <td>Surname</td>
+                        <td>Mustermann</td>
+                        </tr>
+                        <tr>
+                        <td>Birthday</td>
+                        <td>01.01.2000</td>
+                        </tr>
+                        <tr>
+                        <td>Class</td>
+                        <td>2a</td>
+                        </tr>
+                        <tr>
+                        <td>Mobile</td>
+                        <td>012 345 67 89</td>
+                        </tr>
+                        <tr>
+                        <td>Email Address</td>
+                        <td>Vmustermann@gradehub.com</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section class="holidays-section">
+                <h2 class="subheading">Holidays</h2>
+                <p id="holidays-countdown"></p>
+                <p>left</p>
+                <div class="holidays-container">
+                    <ul>
+                        <li>February break</li>
+                        <li>Christmas break</li>
+                        <li>Easter break</li>
+                        <li>Summer break</li>
+                        <li>May break</li>
+                        <li>Autumn break</li>
+                    </ul>
+                </div>
+            </section>    
+        </div>
+        <footer>
+            <p>Created with ♥ by Vanessa</p>
+        </footer>
+    </main>
+    <aside class="third-column">
+        <div class="third-column-bar">
+            <img class="notification-bell" src="img\bell.png" alt="notificatin bell">
+            <div class="profile-icon">
+                <img src="img/profile.png" alt="profile picture" width="50em"> <!-- css styles -->
+                <p class="subheading" id="profile-name"></p>
+            </div>
+        </div>
+        <section class="homework-section">
+            <h2 class="subheading">Homework</h2>
+            <ul>
+                <li>Finish book</li>
+                <li>Drawing</li>
+                <li>Class notes</li>
+            </ul>
+        </section>
+        <section class="tests-section">
+            <h2 class="subheading">Tests</h2>
+            <ul>
+                <li>Limits</li>
+                <li>Geophysics</li>
+                <li>Mgnetism</li>
+                <li>Lecture</li>
+            </ul>
+        </section>
+    </aside>
+    <script src="script.js"></script>
+</body>
+</html>

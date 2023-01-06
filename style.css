@@ -1,0 +1,247 @@
+/* light grey:#737373 pink:#E052E0 light pink:#F7EDF5 dark grey:#262626*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@500&display=swap');
+
+/* TYPOGRAPHY */
+* {
+    font-family: 'Outfit', sans-serif;
+    color: #262626;
+}
+
+.subheading {
+    font-weight: 600;
+    color: #262626;
+}
+
+.text {
+    color: #737373;
+    font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* INDEX.HTML */
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.login {       
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    height: 100%; 
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center; 
+    justify-content: center;
+    padding: 2.5em 1em 5em 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-body {
+    background-color: #F7EDF5;
+    height: 100%;
+}
+
+.form-container input, button {
+    display: block;
+    width: 75%;
+    border-radius: 25px;
+    border: 2.5px solid #F7EDF5;
+    padding: 6.5px;
+}
+
+.form-container input::placeholder {
+    text-align: center;
+}
+
+.form-container input, label {
+    margin: 3px;
+}
+
+/* HOME */
+.home-body {
+    display: grid;
+    grid-template-columns: 1.2fr 4fr 1.5fr;
+    grid-template-rows: 1fr, 5fr; 
+    grid-gap: 10px;
+    /*grid-template-areas: ;*/
+}
+
+.first-column {
+  padding: 1rem;
+}
+
+/*.logo {
+  grid-column: 1;
+  grid-row: 3;
+} */
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.menu li {
+    margin: 10px 0;
+}
+
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    color: #737373;
+}
+
+.second-column {
+  background-color: #F7EDF5;
+  height: 100%;
+  padding: 1rem;
+}
+
+.head-title {
+  background-color: #E052E0;
+  border-radius: 20px;
+  padding: 0.2em;
+  color: #fff;
+}
+
+.personal-information-section {
+  border-radius: 25px;
+}
+
+.personal-information-container {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 1.5em;
+}
+
+table {
+  border: 0;
+  color: #737373;
+}
+
+.holidays-section {
+  border-radius: 25px;
+}
+
+.holidays-container {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 1.5em;
+}
+
+#holidays-countdown {
+  color: #E052E0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.notification-bell {
+  width: 1rem;
+  height: auto;
+  background-color: #F7EDF5;
+  padding: 0.5em;
+  border-radius: 50%;
+}
+
+footer {
+  color: #737373;
+  text-align: center;
+}
+
+.third-column {
+  padding: 1rem;
+}
+
+
+#profile-name {
+  background-color: #F7EDF5;
+  border-radius: 25px;
+  padding: 0.4em;
+}
+
+.homework-section {
+  border: 3px solid #F7EDF5;
+  border-radius: 25px;
+  padding: 1em;
+}
+
+.tests-section {
+  border: 3px solid #F7EDF5;
+  border-radius: 25px;
+  padding: 1em;
+}
+
+/* .menu li a::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.menu li.menu-home a::before {
+    background-image: url("img/home.png");
+    background-color: red;
+}
+  
+.menu li.menu-grades a::before {
+    background-image: url("img/contacts.png");
+}
+  
+.menu li.menu-calculator a::before {
+    background-image: url("svg/calculator.svg");
+}
+  
+.menu li.menu- contacts  a::before {
+    background-image: url("svg/contacts.svg");
+}*/
+  
+/* BUTTON STYLES */
+.btn {
+    background-color: #E052E0;
+    color: #fff;
+    border: none;
+    padding: 9px;
+    border-radius: 25px;
+}
+
+.btn-login {
+    width: 80%;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 500px) {
+    .form-container {
+      width: 300px;
+    }
+}
+
+/* OTHER */
+.logo {
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 0.1rem;
+    color: #E052E0;
+    font-size: 2.5rem;
+}
