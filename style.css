@@ -1,8 +1,16 @@
-/* light grey:#737373 pink:#E052E0 light pink:#F7EDF5 dark grey:#262626*/
+/*TABLE OF CONTENTS:
+  1. TYPOGRAPHY
+  2. INDEX.HTML
+  3. HOME
+  4. BUTTON STYLES
+  5. TABLE STYLES
+  6. MEDIA QUERIES 
+  7. OTHER*/
+
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@500&display=swap');
 
-/* TYPOGRAPHY */
+/* 1. TYPOGRAPHY */
 * {
     font-family: 'Outfit', sans-serif;
     color: #262626;
@@ -22,10 +30,11 @@ a {
   text-decoration: none;
 }
 
-/* INDEX.HTML */
+/* 2. INDEX.HTML */
 body {
     height: 100%;
     margin: 0;
+    padding: 0;
 }
 
 .login {       
@@ -72,14 +81,8 @@ body {
     margin: 3px;
 }
 
-/* HOME */
-.home-body {
-    display: grid;
-    grid-template-columns: 1.2fr 4fr 1.5fr;
-    grid-template-rows: 1fr, 5fr; 
-    grid-gap: 10px;
-    /*grid-template-areas: ;*/
-}
+/* 3. HOME */
+test
 
 .first-column {
   padding: 1rem;
@@ -89,6 +92,54 @@ body {
   grid-column: 1;
   grid-row: 3;
 } */
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.8fr 3fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+
+.logo {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.menu {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.head-title {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.personal-information-section {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.holidays-section {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.third-column-bar {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  display: flex;
+  align-items: center;
+}
+
+.homework-section {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.tests-section {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
 
 .menu {
     list-style: none;
@@ -99,7 +150,6 @@ body {
 .menu li {
     margin: 10px 0;
 }
-
 
 .menu li a {
     display: block;
@@ -118,6 +168,7 @@ body {
   border-radius: 20px;
   padding: 0.2em;
   color: #fff;
+  font-weight: 600;
 }
 
 .personal-information-section {
@@ -130,9 +181,14 @@ body {
   padding: 1.5em;
 }
 
-table {
-  border: 0;
-  color: #737373;
+.personal-information-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+  
+.profile-picture {
+  height: 10em;
 }
 
 .holidays-section {
@@ -168,7 +224,6 @@ footer {
   padding: 1rem;
 }
 
-
 #profile-name {
   background-color: #F7EDF5;
   border-radius: 25px;
@@ -185,6 +240,18 @@ footer {
   border: 3px solid #F7EDF5;
   border-radius: 25px;
   padding: 1em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.tests-list li::before {
+  content: "Ph";
+  color: #E052E0; 
+  font-size: 1.2em;
+  padding-right: 0.5em;
+  font-weight: 500;
 }
 
 /* .menu li a::before {
@@ -214,7 +281,7 @@ footer {
     background-image: url("svg/contacts.svg");
 }*/
   
-/* BUTTON STYLES */
+/* 4. BUTTON STYLES */
 .btn {
     background-color: #E052E0;
     color: #fff;
@@ -231,14 +298,42 @@ footer {
     opacity: 0.8;
 }
 
-/* MEDIA QUERIES */
+/* 5. TABLE STYLES*/
+li, td{
+  color: #737373;
+}
+
+td:first-child {
+  font-weight: 500;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 80%;
+}
+
+th, td {
+  padding: 5px;
+}
+
+table {
+  border: 0;
+  color: #737373;
+}
+
+.holidays-table {
+  text-align: center;
+}
+
+/* 6. MEDIA QUERIES */
 @media (max-width: 500px) {
     .form-container {
       width: 300px;
     }
 }
 
-/* OTHER */
+/* 7. OTHER */
 .logo {
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 0.1rem;

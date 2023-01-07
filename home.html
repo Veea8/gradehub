@@ -2,7 +2,8 @@
 display svg icons 
 notification bell round
 (today's date)
-(dates for homework)-->
+(dates for homework)
+align tables properly-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@ notification bell round
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="home-body">
+<body class="home-body grid-container">
     <nav class="first-column">
         <h1 class="logo">GradeHub</h1>
         <ul class="menu">
@@ -29,8 +30,8 @@ notification bell round
             <section class="personal-information-section">
                 <h2 class="subheading">Personal Information</h2>
                 <div class="personal-information-container">
-                    <img src="img/Profile.png" alt="profile picture" width="110em"> <!-- css style -->
-                    <table>
+                    <img src="img/Profile.png" class="profile-picture" alt="profile picture"> 
+                    <table class="personal-information-table">
                         <tr>
                         <td>Name</td>
                         <td id="personal-information-name"></td>
@@ -60,17 +61,35 @@ notification bell round
             </section>
             <section class="holidays-section">
                 <h2 class="subheading">Holidays</h2>
-                <p id="holidays-countdown"></p>
-                <p>left</p>
+                <p><span id="holidays-countdown"></span>left</p> 
                 <div class="holidays-container">
-                    <ul>
-                        <li>February break</li>
-                        <li>Christmas break</li>
-                        <li>Easter break</li>
-                        <li>Summer break</li>
-                        <li>May break</li>
-                        <li>Autumn break</li>
-                    </ul>
+                    <table class="holidays-table">
+                        <tr>
+                          <td>February break</td>
+                          <td>13-17 February 2023</td>
+                        </tr>
+                        <tr>
+                          <td>Christmas break</td>
+                          <td>23-30 December 2023</td>
+                        </tr>
+                        <tr>
+                          <td>Easter break</td>
+                          <td>3-14 April 2023</td>
+                        </tr>
+                        <tr>
+                          <td>Summer break</td>
+                          <td>1 - 21 July 2023</td>
+                        </tr>
+                        <tr>
+                          <td>May break</td>
+                          <td>29 May - 2 June 2023</td>
+                        </tr>
+                        <tr>
+                          <td>Autumn break</td>
+                          <td>24-31 October 2023</td>
+                        </tr>
+                      </table>
+                      
                 </div>
             </section>    
         </div>
@@ -96,11 +115,11 @@ notification bell round
         </section>
         <section class="tests-section">
             <h2 class="subheading">Tests</h2>
-            <ul>
-                <li>Limits</li>
+            <ul class="tests-list">
+                <li>Energy</li>
                 <li>Geophysics</li>
-                <li>Mgnetism</li>
-                <li>Lecture</li>
+                <li>Magnetism</li>
+                <li>Forces</li>
             </ul>
         </section>
     </aside>
