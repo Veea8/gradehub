@@ -14,22 +14,21 @@ align tables properly-->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="home-body grid-container">
-    <nav class="first-column">
-        <h1 class="logo">GradeHub</h1>
+        <h1 class="logo margin">GradeHub</h1>
         <ul class="menu">
             <li class="menu-home"><a href="home.html">Home</a></li>
             <li class="menu-grades"><a href="grades.html">Grades</a></li>
             <li class="menu-calculator"><a href="calculator.html">Calculator</a></li>
             <li class="menu-contacts"><a href="contacts.html">Contacts</a></li>
         </ul>
-        <a class="btn" href="index.html">SIGN OUT</a>
-    </nav>
-    <main class="second-column">
-        <h1 class="head-title">Welcome back, <span class="head-title" id="welcome-name"></span>!</h1>
-        <div class="second-column-sections">
-            <section class="personal-information-section">
-                <h2 class="subheading">Personal Information</h2>
-                <div class="personal-information-container">
+        <a class="btn sign-out-btn margin" href="index.html">SIGN OUT</a>
+
+        <div class="title-container light-pink-bg">
+            <h1 class="head-title margin">Welcome back, <span class="head-title" id="welcome-name"></span>!</h1>
+        </div>
+            <section class="personal-information-section light-pink-bg">
+                <h2 class="subheading margin">Personal Information</h2>
+                <div class="personal-information-container margin">
                     <img src="img/Profile.png" class="profile-picture" alt="profile picture"> 
                     <table class="personal-information-table">
                         <tr>
@@ -59,68 +58,66 @@ align tables properly-->
                     </table>
                 </div>
             </section>
-            <section class="holidays-section">
-                <h2 class="subheading">Holidays</h2>
-                <p><span id="holidays-countdown"></span>left</p> 
-                <div class="holidays-container">
+            <section class="holidays-section light-pink-bg">
+                <h2 class="subheading margin">Holidays</h2>
+                <p class="margin"><span id="holidays-countdown"></span>left</p> 
+                <div class="holidays-container margin">
                     <table class="holidays-table">
                         <tr>
                           <td>February break</td>
                           <td>13-17 February 2023</td>
                         </tr>
                         <tr>
-                          <td>Christmas break</td>
-                          <td>23-30 December 2023</td>
-                        </tr>
-                        <tr>
                           <td>Easter break</td>
                           <td>3-14 April 2023</td>
                         </tr>
+                        <tr>
+                            <td>May break</td>
+                            <td>29 May - 2 June 2023</td>
+                          </tr>
                         <tr>
                           <td>Summer break</td>
                           <td>1 - 21 July 2023</td>
                         </tr>
                         <tr>
-                          <td>May break</td>
-                          <td>29 May - 2 June 2023</td>
-                        </tr>
-                        <tr>
                           <td>Autumn break</td>
                           <td>24-31 October 2023</td>
                         </tr>
+                        <tr>
+                            <td>Christmas break</td>
+                            <td>23-30 December 2023</td>
+                          </tr>
                       </table>
                       
                 </div>
             </section>    
-        </div>
-        <footer>
-            <p>Created with ♥ by Vanessa</p>
+
+        <footer class="light-pink-bg">
+            <p class="margin">Created with ♥ by Vanessa</p>
         </footer>
-    </main>
-    <aside class="third-column">
-        <div class="third-column-bar">
+
+        <div class="third-column-bar margin">
             <img class="notification-bell" src="img\bell.png" alt="notificatin bell">
             <img src="img/profile.png" alt="profile picture" width="50em"> <!-- css styles -->
             <p class="subheading" id="profile-name"></p>
         </div>
-        <section class="homework-section">
-            <h2 class="subheading">Homework</h2>
-            <ul>
-                <li>Finish book</li>
-                <li>Drawing</li>
-                <li>Class notes</li>
-            </ul>
-        </section>
-        <section class="tests-section">
-            <h2 class="subheading">Tests</h2>
-            <ul class="tests-list">
-                <li>Energy</li>
-                <li>Geophysics</li>
-                <li>Magnetism</li>
-                <li>Forces</li>
-            </ul>
-        </section>
-    </aside>
+            <section class="homework-section margin">
+                <h2 class="subheading">Homework</h2>
+                <ul>
+                    <li>Finish book</li>
+                    <li>Drawing</li>
+                    <li>Class notes</li>
+                </ul>
+            </section>
+            <section class="tests-section margin ">
+                <h2 class="subheading">Tests</h2>
+                <ul class="tests-list">
+                    <li>Energy</li>
+                    <li>Geophysics</li>
+                    <li>Magnetism</li>
+                    <li>Forces</li>
+                </ul>
+            </section>
     <script src="script.js"></script>
 </body>
 </html>
