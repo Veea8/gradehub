@@ -82,16 +82,10 @@ body {
 }
 
 /* 3. HOME */
-test
-
 .first-column {
   padding: 1rem;
 }
 
-/*.logo {
-  grid-column: 1;
-  grid-row: 3;
-} */
 .grid-container {
   display: grid;
   grid-template-columns: 0.8fr 3fr 1fr;
@@ -102,6 +96,7 @@ test
 .logo {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  margin-top: 1.5rem;
 }
 
 .menu {
@@ -127,8 +122,16 @@ test
 .third-column-bar {
   grid-column: 3 / 4;
   grid-row: 1 / 2;
+  margin-top: 1.2rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.profile-name {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
 }
 
 .homework-section {
