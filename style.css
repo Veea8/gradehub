@@ -1,16 +1,23 @@
 /*TABLE OF CONTENTS:
-  1. TYPOGRAPHY
+  1. GLOBAL STYLES
   2. INDEX.HTML
-  3. HOME
+  3. HOME.HTML
   4. BUTTON STYLES
   5. TABLE STYLES
   6. MEDIA QUERIES 
-  7. OTHER*/
+  7. OTHER STYLES*/
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@500&display=swap');
 
-/* 1. TYPOGRAPHY */
+/* 1. GLOBAL STYLES */
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #F7EDF5;
+}
+
 * {
     font-family: 'Outfit', sans-serif;
     color: #262626;
@@ -32,12 +39,18 @@ a {
 }
 
 /* 2. INDEX.HTML */
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.logo-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+}
 .login {       
     display: flex;
     flex-direction: column;
@@ -82,28 +95,30 @@ body {
     margin: 3px;
 }
 
-/* 3. HOME */
+/* 3. HOME.HTML */
 .grid-container {
   display: grid;
   grid-template-columns: 0.8fr 3fr 1fr;
   grid-template-rows: auto auto auto auto;
   grid-template-areas: 
-    "logo title-container third-column-bar"
-    "menu personal-information-section homework-section"
-    "menu holidays-section tests-section"
-    "sign-out-btn footer .";
+    "logo-container title-container third-column-bar-container"
+    "menu-container personal-information-section homework-section-container"
+    "menu-container holidays-section tests-section-container"
+    "btn-container footer empty";
 }
 
-.logo {
-  grid-area: logo;
+.logo-container {
+  grid-area: logo-container;
+  border-radius: 0 35px 0 0;
 }
 
-.menu {
-  grid-area: menu;
+.menu-container {
+  grid-area: menu-container;
 }
 
-.sign-out-btn {
-  grid-area: sign-out-btn;
+.btn-container {
+  grid-area: btn-container;
+  border-radius: 0 0 35px 0;
 }
 
 .title-container {
@@ -122,24 +137,41 @@ body {
   grid-area: footer;
 }
 
-.third-column-bar {
-  grid-area: third-column-bar;
+.third-column-bar-container {
+  grid-area: third-column-bar-container;
+  border-radius: 35px 0 0 0;
 }
 
-.homework-section {
-  grid-area: homework-section;
+.homework-section-container {
+  grid-area: homework-section-container;
 }
 
-.tests-section {
-  grid-area: tests-section;
+.tests-section-container {
+  grid-area: tests-section-container;
+}
+
+.empty {
+  grid-area: empty;
+  border-radius: 0 0 0 35px;
 }
 
 .margin {
   margin: 1.5rem;
 }
 
-.light-pink-bg {
-  background-color: #F7EDF5;
+.white-background {
+  background-color: #fff;
+}
+
+.logo-home {
+  border-radius: 25px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.menu {
+  float: right;
+  margin-right: 5rem;
 }
 
 .third-column-bar {
@@ -214,11 +246,8 @@ footer {
 }
 
 .notification-bell {
-  width: 1rem;
+  width: 2.5rem;
   height: auto;
-  background-color: #F7EDF5;
-  padding: 0.5em;
-  border-radius: 50%;
 }
 
 #profile-name {
@@ -231,16 +260,30 @@ footer {
   border: 3px solid #F7EDF5;
   border-radius: 25px;
   padding: 1em;
+  height: 74%; /*check*/
 }
 
 .tests-section {
   border: 3px solid #F7EDF5;
   border-radius: 25px;
   padding: 1em;
+  height: 77%; /*check*/
 }
 
 ul {
   list-style-type: none;
+  padding: 0;
+}
+
+.homework-list li::before {
+  content: "〇";
+  font-size: 1.8em;
+  font-weight: 200;
+  padding-right: 0.4em;
+}
+
+.homework-list {
+  text-align: left;
 }
 
 .tests-list li::before {
@@ -251,7 +294,11 @@ ul {
   font-weight: 500;
 }
 
-/* .menu li a::before {
+.tests-list li {
+  margin-bottom: 20px;
+}
+
+.menu li a::before {
     content: "";
     display: inline-block;
     width: 24px;
@@ -262,22 +309,21 @@ ul {
     margin-right: 10px;
 }
 .menu li.menu-home a::before {
-    background-image: url("img/home.png");
-    background-color: red;
+    background-image: url("svg/home.svg");
 }
   
 .menu li.menu-grades a::before {
-    background-image: url("img/contacts.png");
+    background-image: url("svg/grades.svg");
 }
   
 .menu li.menu-calculator a::before {
     background-image: url("svg/calculator.svg");
 }
   
-.menu li.menu- contacts  a::before {
+.menu li.menu-contacts  a::before {
     background-image: url("svg/contacts.svg");
-}*/
-  
+}
+
 /* 4. BUTTON STYLES */
 .btn {
     background-color: #E052E0;
@@ -289,6 +335,7 @@ ul {
 
 .btn-login {
     width: 80%;
+    font-size: 1rem;
 }
 
 .btn:hover {
@@ -324,13 +371,13 @@ table {
 }
 
 /* 6. MEDIA QUERIES */
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .form-container {
       width: 300px;
     }
 }
 
-/* 7. OTHER */
+/* 7. OTHER STYLES*/
 .logo {
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 0.1rem;
