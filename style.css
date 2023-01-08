@@ -31,13 +31,16 @@ body {
 
 .text {
     color: #737373;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 a {
   text-decoration: none;
 }
 
+.navbar-container {
+  display: none;
+}
 /* 2. INDEX.HTML */
 
 .login {
@@ -164,8 +167,6 @@ a {
 }
 
 .logo-home {
-  border-radius: 25px;
-  background-color: #fff;
   text-align: center;
 }
 
@@ -210,6 +211,7 @@ a {
   padding: 0.2em;
   color: #fff;
   font-weight: 600;
+  font-size: 2.1rem;
 }
 
 .personal-information-container {
@@ -225,7 +227,7 @@ a {
 }
   
 .profile-picture {
-  height: 10em;
+  height: 10rem;
 }
 
 .holidays-container {
@@ -371,10 +373,78 @@ table {
 }
 
 /* 6. MEDIA QUERIES */
-@media (max-width: 480px) {
+@media only screen and (max-width: 30em) {
     .form-container {
       width: 300px;
     }
+
+    .grid-container {
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas: 
+        "navbar-container" 
+        "title-container"
+        "personal-information-section"
+        "holidays-section"
+        "footer";
+    }
+  
+    .navbar-container {
+      display: contents;
+      grid-area: navbar-container;
+      margin-top: 1.2rem;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-container,
+    .third-column-bar-container,
+    .menu-container,
+    .homework-section-container,
+    .tests-section-container,
+    .btn-container,
+    .empty {
+      display: none;
+    }
+
+    * {
+      font-size: 95%;
+    }
+
+    .margin {
+      margin: 0.8rem;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+
+    .profile-picture {
+      height: 4.5rem;
+      margin-right: 1em;
+    }
+    
+    .personal-information-container {
+      padding: 1em;
+    }
+
+    .head-title {
+      font-size: 1.5rem;
+    }
+
+    .subheading {
+      font-size: 1rem;
+    }
+
+    #holidays-countdown {
+      font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 30em) and (max-width: 50em) {
+  
 }
 
 /* 7. OTHER STYLES*/
