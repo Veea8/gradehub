@@ -42,17 +42,6 @@ icon.addEventListener("click", () => {
   homeworkSection.style.width = testsSection.style.width = "100%"; 
 });
 
-/*tablet menu
-const hamburgerMenuTablet = document.querySelector(".hamburger-menu-tablet");
-const popupMenuTablet = document.querySelector(".popup-menu-tablet");
-hamburgerMenuTablet.addEventListener("click", () => {
-  if (popupMenuTablet.style.display === "none") {
-    popupMenuTablet.style.display = "block";
-  } else {
-    popupMenuTablet.style.display = "none";
-  }
-});*/
-
 // tablet menu
 const hamburgerMenuTablet = document.querySelector(".hamburger-menu-tablet");
 const popupMenuTablet = document.querySelector(".popup-menu-tablet");

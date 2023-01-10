@@ -503,8 +503,13 @@ table {
       border-bottom: 1px solid #E052E0
     }
 
+    .homework-section, .tests-section {
+      background-color: #fff;
+    }
+
     .homework-section-container.visible, .tests-section-container.visible {
       display: block; 
+      background: none;
     }
     
     .homework-section-container:not(.visible), .tests-section-container:not(.visible){
@@ -536,8 +541,6 @@ table {
   .hamburger-menu-tablet {
     display: block;
   }
-
-/*POPUP MENU (VLLT MUSS ES NOCHMALS IM HTML CODE EINGEFÜGT WERDEN)*/
 
   .popup-menu-tablet {
     position: absolute;
