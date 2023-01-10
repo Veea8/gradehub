@@ -4,8 +4,7 @@
   3. HOME.HTML
   4. BUTTON STYLES
   5. TABLE STYLES
-  6. MEDIA QUERIES 
-  7. OTHER STYLES*/
+  6. MEDIA QUERIES*/
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@500&display=swap');
@@ -38,7 +37,26 @@ a {
   text-decoration: none;
 }
 
+.logo {
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 0.1rem;
+  color: #E052E0;
+  font-size: 2.5rem;
+}
+
+.navbar-tablet {
+  display: none;
+}
+
 .navbar-container {
+  display: none;
+}
+
+.popup-menu {
+  display: none;
+}
+
+.hamburger-menu-tablet {
   display: none;
 }
 /* 2. INDEX.HTML */
@@ -80,6 +98,10 @@ a {
 .login-body {
     background-color: #F7EDF5;
     height: 100%;
+}
+
+.login-title {
+  font-size: 1.7rem;
 }
 
 .form-container input, button {
@@ -147,6 +169,7 @@ a {
 
 .homework-section-container {
   grid-area: homework-section-container;
+  min-width: 15rem;
 }
 
 .tests-section-container {
@@ -373,7 +396,7 @@ table {
 }
 
 /* 6. MEDIA QUERIES */
-@media only screen and (max-width: 30em) {
+@media only screen and (max-width: 35em) {
     .form-container {
       width: 300px;
     }
@@ -399,6 +422,11 @@ table {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background-color: #fff;
+    }
+
+    .logo, .logo-home {
+      font-size: 1.7rem;
     }
 
     .logo-container,
@@ -441,16 +469,93 @@ table {
     #holidays-countdown {
       font-size: 1.2rem;
     }
-}
 
-@media only screen and (min-width: 30em) and (max-width: 50em) {
+    .hamburger-menu {
+      margin-left: 1.5rem;
+    }
+
+    .profile-icon {
+      margin-right: 1.5rem;
+    }
+
+    .notification-bell {
+      width: 2rem;
+      height: auto;
+    }
+
+    .popup-menu {
+      position: absolute;
+      top: 52px;
+      background: #fff;
+      width: 100%;
+    }
+    
+    .popup-menu li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      color: #737373;
+      border-bottom: 1px solid #F7EDF5;
+    }
+
+    .popup-menu li:hover {
+      border-bottom: 1px solid #E052E0
+    }
+
+    .homework-section-container.visible, .tests-section-container.visible {
+      display: block; 
+    }
+    
+    .homework-section-container:not(.visible), .tests-section-container:not(.visible){
+      display: none; 
+    }    
+}
+/* 480px and 800px  */
+@media only screen and (min-width: 35em) and (max-width: 50em) {
+  .grid-container {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "title-container third-column-bar-container"
+    "personal-information-section homework-section-container"
+    "holidays-section tests-section-container"
+    "footer empty";
+  }
+
+  .logo-container,
+  .menu-container,
+  .btn-container{
+    display: none;
+  }
+
+  .homework-section-container {
+    min-width: 20rem;
+  }
+
+  .hamburger-menu-tablet {
+    display: block;
+  }
+
+/*POPUP MENU (VLLT MUSS ES NOCHMALS IM HTML CODE EINGEFÜGT WERDEN)*/
+
+  .popup-menu-tablet {
+    position: absolute;
+    top: 52px;
+    background: #fff;
+  }
   
-}
+  .popup-menu-tablet li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    color: #737373;
+    border-bottom: 1px solid #F7EDF5;
+    text-align: center;
+  }
 
-/* 7. OTHER STYLES*/
-.logo {
-    font-family: 'Ubuntu', sans-serif;
-    letter-spacing: 0.1rem;
-    color: #E052E0;
-    font-size: 2.5rem;
+  .popup-menu-tablet li:hover {
+    border-bottom: 1px solid #E052E0
+  }
 }

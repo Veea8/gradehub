@@ -1,11 +1,13 @@
-<!-- right names for semantic elements
+<!-- RIGHT NAMES FOR SEMANTIC ELEMENTS
 fill when hover svg icons 
 (today's date)
 (dates for homework)
 align tables in second column properly
 connect profile picture and profile name
 center homework li with bullet point vertically
-onclick homework circles-->
+onclick homework circles
+(hamburger menu animation, cross)
+MENU DISPAPPEARS WHEN RESIZING SCREEN-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,10 +20,18 @@ onclick homework circles-->
 <body class="home-body grid-container">
     <div class="navbar-container">
         <div class="navbar">
-            <img src="svg\menu.svg" alt="menu icon">
-            <h1 class="logo margin logo-home">GradeHub</h1>
+            <img src="svg\menu.svg" class="hamburger-menu" alt="menu icon">
+            <h1 class="logo logo-home">GradeHub</h1>
             <img class="notification-bell" src="svg\notification.svg" alt="notificatin bell">
-            <img src="svg\profile.svg" alt="profile icon">
+            <img src="svg\profile.svg" class="profile-icon" alt="profile icon">
+
+            <ul class="popup-menu">
+                <li class="menu-home"><a href="home.html">Home</a></li>
+                <li class="menu-grades"><a href="grades.html">Grades</a></li>
+                <li class="menu-calculator"><a href="calculator.html">Calculator</a></li>
+                <li class="menu-contacts"><a href="contacts.html">Contacts</a></li>
+                <li class="menu-contacts"><a href="index.html">SIGN OUT</a></li>
+            </ul>
         </div>
     </div>
     <div class="logo-container white-background">
@@ -118,6 +128,15 @@ onclick homework circles-->
                 <img class="notification-bell" src="svg\notification.svg" alt="notificatin bell">
                 <img src="img/profile.png" alt="profile picture" width="50em"> <!-- css styles -->
                 <p class="subheading" id="profile-name"></p>
+                <img src="svg\menu.svg" class="hamburger-menu-tablet" alt="menu icon">
+
+                <ul class="popup-menu-tablet">
+                    <li class="menu-home"><a href="home.html">Home</a></li>
+                    <li class="menu-grades"><a href="grades.html">Grades</a></li>
+                    <li class="menu-calculator"><a href="calculator.html">Calculator</a></li>
+                    <li class="menu-contacts"><a href="contacts.html">Contacts</a></li>
+                    <li class="menu-contacts"><a href="index.html">SIGN OUT</a></li>
+                </ul>
             </div>
         </div>
         <div class="homework-section-container white-background">
