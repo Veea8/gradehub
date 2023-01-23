@@ -1,13 +1,8 @@
-<!-- RIGHT NAMES FOR SEMANTIC ELEMENTS
-fill when hover svg icons 
-(today's date)
-(dates for homework)
-align tables in second column properly
-connect profile picture and profile name
-center homework li with bullet point vertically
-onclick homework circles
-(hamburger menu animation, cross)
-MENU DISPAPPEARS WHEN RESIZING SCREEN-->
+<!--RIGHT NAMES FOR SEMANTIC ELEMENTS
+    WRAPPER/CONTAINER
+    change background of popup section menu to white
+    are the elements named sections actually sections?
+    fonts etc too small when resizing window-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +29,7 @@ MENU DISPAPPEARS WHEN RESIZING SCREEN-->
             </ul>
         </div>
     </div>
+
     <div class="logo-container white-background">
         <h1 class="logo margin logo-home">GradeHub</h1>
     </div>
@@ -45,123 +41,133 @@ MENU DISPAPPEARS WHEN RESIZING SCREEN-->
             <li class="menu-contacts"><a href="contacts.html">Contacts</a></li>
         </ul>
     </div>
-        
-        <div class="btn-container white-background"> 
-            <a class="btn sign-out-btn margin" href="index.html">SIGN OUT</a>
-         </div>
-       
-        <div class="title-container">
-            <h1 class="head-title margin">Welcome back, <span class="head-title" id="welcome-name"></span>!</h1>
-        </div>
-            <section class="personal-information-section">
-                <h2 class="subheading margin">Personal Information</h2>
-                <div class="personal-information-container margin">
-                    <img src="img/profile.png" class="profile-picture" alt="profile picture"> 
-                    <table class="personal-information-table">
-                        <tr>
-                        <td>Name</td>
-                        <td id="personal-information-name"></td>
-                        </tr>
-                        <tr>
-                        <td>Surname</td>
-                        <td>Mustermann</td>
-                        </tr>
-                        <tr>
-                        <td>Birthday</td>
-                        <td>01.01.2000</td>
-                        </tr>
-                        <tr>
-                        <td>Class</td>
-                        <td>2a</td>
-                        </tr>
-                        <tr>
-                        <td>Mobile</td>
-                        <td>012 345 67 89</td>
-                        </tr>
-                        <tr>
-                        <td>Email Address</td>
-                        <td>Vmustermann@gradehub.com</td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
-            <section class="holidays-section">
-                <h2 class="subheading margin">Holidays</h2>
-                <p class="margin"><span id="holidays-countdown"></span>left</p> 
-                <div class="holidays-container margin">
-                    <table class="holidays-table">
-                        <tr>
-                          <td>February break</td>
-                          <td>13-17 February 2023</td>
-                        </tr>
-                        <tr>
-                          <td>Easter break</td>
-                          <td>3-14 April 2023</td>
-                        </tr>
-                        <tr>
-                            <td>May break</td>
-                            <td>29 May - 2 June 2023</td>
-                          </tr>
-                        <tr>
-                          <td>Summer break</td>
-                          <td>1 - 21 July 2023</td>
-                        </tr>
-                        <tr>
-                          <td>Autumn break</td>
-                          <td>24-31 October 2023</td>
-                        </tr>
-                        <tr>
-                            <td>Christmas break</td>
-                            <td>23-30 December 2023</td>
-                          </tr>
-                      </table>
-                      
-                </div>
-            </section>    
+    <div class="btn-container white-background"> 
+        <a class="btn sign-out-btn margin" href="index.html">SIGN OUT</a>
+    </div>
 
-        <footer>
-            <p class="margin">Created with ♥ by Vanessa</p>
-        </footer>
+    <div class="title-container">
+        <h1 class="head-title margin">Welcome back, <span class="head-title" id="welcome-name"></span>!</h1>
+    </div>
+    <section class="first-main-section">
+        <h2 class="subheading margin">Personal Information</h2>
+        <div class="personal-information-container margin container">
+            <img src="img\profile.png" class="profile-picture" alt="profile picture"> 
+            <table class="personal-information-table">
+                <tr>
+                <td>Name</td>
+                <td id="personal-information-name"></td>
+                </tr>
+                <tr>
+                <td>Surname</td>
+                <td>Mustermann</td>
+                </tr>
+                <tr>
+                <td>Birthday</td>
+                <td>01.01.2000</td>
+                </tr>
+                <tr>
+                <td>Class</td>
+                <td>2a</td>
+                </tr>
+                <tr>
+                <td>Mobile</td>
+                <td>012 345 67 89</td>
+                </tr>
+                <tr>
+                <td>Email Address</td>
+                <td>Vmustermann@gradehub.com</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section class="second-main-section">
+        <h2 class="subheading margin">Holidays</h2>
+        <p class="margin"><span id="holidays-countdown"></span>left</p> 
+        <div class="holidays-container margin container">
+            <table class="holidays-table">
+                <tr>
+                    <td>February break</td>
+                    <td>13-17 February 2023</td>
+                </tr>
+                <tr>
+                    <td>Easter break</td>
+                    <td>3-14 April 2023</td>
+                </tr>
+                <tr>
+                    <td>May break</td>
+                    <td>29 May - 2 June 2023</td>
+                    </tr>
+                <tr>
+                    <td>Summer break</td>
+                    <td>1 - 21 July 2023</td>
+                </tr>
+                <tr>
+                    <td>Autumn break</td>
+                    <td>24-31 October 2023</td>
+                </tr>
+                <tr>
+                    <td>Christmas break</td>
+                    <td>23-30 December 2023</td>
+                    </tr>
+                </table>                
+        </div>
+    </section>    
+    <footer>
+        <p class="margin">Created with ♥ by Vanessa</p>
+    </footer>
 
-        <div class="third-column-bar-container white-background">        
-            <div class="third-column-bar margin">
-                <img class="notification-bell" src="svg\notification.svg" alt="notificatin bell">
-                <img src="img/profile.png" alt="profile picture" width="50em"> <!-- css styles -->
-                <p class="subheading" id="profile-name"></p>
-                <img src="svg\menu.svg" class="hamburger-menu-tablet" alt="menu icon">
-
-                <ul class="popup-menu-tablet">
-                    <li class="menu-home"><a href="home.html">Home</a></li>
-                    <li class="menu-grades"><a href="grades.html">Grades</a></li>
-                    <li class="menu-calculator"><a href="calculator.html">Calculator</a></li>
-                    <li class="menu-contacts"><a href="contacts.html">Contacts</a></li>
-                    <li class="menu-contacts"><a href="index.html">SIGN OUT</a></li>
-                </ul>
-            </div>
+    <div class="third-column-bar-container white-background">        
+        <div class="third-column-bar margin">
+            <img class="notification-bell" src="svg\notification.svg" alt="notificatin bell">
+            <img src="img\profile.png" class="img-profile-picture" alt="profile picture"> 
+            <p class="subheading" id="profile-name"></p>
         </div>
-        <div class="homework-section-container white-background">
-                <section class="homework-section margin">
-                <h2 class="subheading">Homework</h2>
-                <ul class="homework-list">
-                    <li>Finish book</li>
-                    <li>Drawing</li>
-                    <li>Class notes</li>
-                    <li>Essay</li>
-                </ul>
-            </section>
-        </div>
-        <div class="tests-section-container white-background">
-            <section class="tests-section margin ">
-                <h2 class="subheading">Tests</h2>
-                <ul class="tests-list">
-                    <li>Energy</li>
-                    <li>Geophysics</li>
-                    <li>Magnetism</li>
-                    <li>Forces</li>
-                </ul>
-            </section>
-        </div>
-        <div class="empty white-background"></div>
+    </div>
+    <div class="homework-section-container white-background">
+            <section class="homework-section margin">
+            <h2 class="subheading">Homework</h2>
+            <ul class="homework-list">
+                <li>Finish book</li>
+                <li>Drawing</li>
+                <li>Class notes</li>
+                <li>Essay</li>
+            </ul>
+        </section>
+    </div>
+    <div class="tests-section-container white-background">
+        <section class="tests-section margin ">
+            <h2 class="subheading">Tests</h2>
+            <ul class="tests-list">
+                <li>Energy</li>
+                <li>Geophysics</li>
+                <li>Magnetism</li>
+                <li>Forces</li>
+            </ul>
+        </section>
+    </div>
+    <div class="homework-section-container homework-section-container-popup white-background">
+        <section class="homework-section margin">
+        <h2 class="subheading">Homework</h2>
+        <ul class="homework-list">
+            <li>Finish book</li>
+            <li>Drawing</li>
+            <li>Class notes</li>
+            <li>Essay</li>
+        </ul>
+    </section>
+    </div>
+    <div class="tests-section-container tests-section-container-popup white-background">
+        <section class="tests-section margin ">
+            <h2 class="subheading">Tests</h2>
+            <ul class="tests-list">
+                <li>Energy</li>
+                <li>Geophysics</li>
+                <li>Magnetism</li>
+                <li>Forces</li>
+            </ul>
+        </section>
+    </div>
+    <div class="empty white-background"></div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,10 +1,15 @@
+/*    CHANGE FONT SIZE UNIT TO EM*/
+
 /*TABLE OF CONTENTS:
   1. GLOBAL STYLES
   2. INDEX.HTML
   3. HOME.HTML
   4. BUTTON STYLES
   5. TABLE STYLES
-  6. MEDIA QUERIES*/
+  6. GRADES.HTML 
+  7. CALCULATOR.HTML
+  8. CONTACTS.HTML
+  9. MEDIA QUERIES*/
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@500&display=swap');
@@ -24,7 +29,6 @@ body {
 
 .subheading {
     font-weight: 600;
-    color: #262626;
     font-size: 1.2rem;
 }
 
@@ -44,10 +48,6 @@ a {
   font-size: 2.5rem;
 }
 
-.navbar-tablet {
-  display: none;
-}
-
 .navbar-container {
   display: none;
 }
@@ -56,28 +56,34 @@ a {
   display: none;
 }
 
-.hamburger-menu-tablet {
+.tests-section-container-popup, .homework-section-container-popup {
   display: none;
 }
-/* 2. INDEX.HTML */
 
-.login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.content-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #737373;
 }
+
+.container {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 1.5em;
+}
+
+/* 2. INDEX.HTML */
 
 .logo-form-wrapper {
   display: flex;
   flex-direction: column;
   align-items: right;
 }
-.login {       
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    height: 100%; 
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-container {
@@ -89,10 +95,10 @@ a {
     align-items: center; 
     justify-content: center;
     padding: 2.5em 1em 5em 1em;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 
 .login-body {
@@ -127,8 +133,8 @@ a {
   grid-template-rows: auto auto auto auto;
   grid-template-areas: 
     "logo-container title-container third-column-bar-container"
-    "menu-container personal-information-section homework-section-container"
-    "menu-container holidays-section tests-section-container"
+    "menu-container first-main-section homework-section-container"
+    "menu-container second-main-section tests-section-container"
     "btn-container footer empty";
 }
 
@@ -150,12 +156,12 @@ a {
   grid-area: title-container;
 }
 
-.personal-information-section {
-  grid-area: personal-information-section;
+.first-main-section {
+  grid-area: first-main-section;
 }
 
-.holidays-section {
-  grid-area: holidays-section;
+.second-main-section {
+  grid-area: second-main-section;
 }
 
 .footer {
@@ -198,11 +204,20 @@ a {
   margin-right: 5rem;
 }
 
+.sign-out-btn {
+  float: right;
+  margin-right: 5rem;
+}
+
 .third-column-bar {
   margin-top: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.img-profile-picture {
+  width: 3em;
 }
 
 .profile-name {
@@ -238,12 +253,6 @@ a {
 }
 
 .personal-information-container {
-  background-color: #fff;
-  border-radius: 25px;
-  padding: 1.5em;
-}
-
-.personal-information-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -251,12 +260,7 @@ a {
   
 .profile-picture {
   height: 10rem;
-}
-
-.holidays-container {
-  background-color: #fff;
-  border-radius: 25px;
-  padding: 1.5em;
+  margin-right: 1em;
 }
 
 #holidays-countdown {
@@ -285,14 +289,14 @@ footer {
   border: 3px solid #F7EDF5;
   border-radius: 25px;
   padding: 1em;
-  height: 74%; /*check*/
+  max-height: 80%; 
 }
 
 .tests-section {
   border: 3px solid #F7EDF5;
   border-radius: 25px;
   padding: 1em;
-  height: 77%; /*check*/
+  max-height: 80%; 
 }
 
 ul {
@@ -395,9 +399,129 @@ table {
   text-align: center;
 }
 
-/* 6. MEDIA QUERIES */
-@media only screen and (max-width: 35em) {
-    .form-container {
+/* 6. GRADES.HTML */
+.second-grid-container {
+  display: grid;
+  grid-template-columns: 0.8fr 3fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: 
+    "logo-container title-container third-column-bar-container"
+    "menu-container main-section homework-section-container"
+    "menu-container main-section tests-section-container"
+    "btn-container footer empty";
+}
+
+main {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  grid-area: main-section;
+} 
+
+.subheading-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.grade-table td {
+  padding: 1rem;
+}
+
+.grade-table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grade-table td {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+}
+
+.grade-table td:not(.exclude) {
+  border-bottom: 1px solid #737373;
+}
+/* 7. CALCULATOR.HTML*/
+.calculator-container {
+  width: 500px;
+  text-align: center;
+  margin: auto;
+  display: block;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5em 1em 5em 1em;
+}
+
+.calculator-container label {
+  color: #737373;
+  font-weight: 500;
+}
+
+.calculator-container select, .calculator-container input {
+  display: block;
+  font-size: 1rem;
+  width: 75%;
+  border-radius: 25px;
+  border: 2.5px solid #F7EDF5;
+  padding: 6.5px;
+  text-align: center;
+  color: #737373;
+  margin: 1rem;
+}
+
+/* 8. CONTACTS.HTML */
+.contacts-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+  "first-profile second-profile"
+  "third-profile fourth-profile";
+}
+
+.first-profile {
+  grid-area: first-profile;
+}
+
+.second-profile {
+  grid-area: second-profile;
+}
+
+.third-profile {
+  grid-area: third-profile;
+}
+
+.fourth-profile {
+  grid-area: fourth-profile;
+}
+
+.contacts-flex-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 1rem;
+}
+
+.contacts-flex-container img{
+  margin-right: 1rem;
+}
+
+.contacts-flex-container p, .contacts-flex-container h2 {
+  color: #737373;
+}
+
+/* 9. MEDIA QUERIES */
+/* 1040px */
+@media only screen and (max-width: 65em) {
+    .form-container, .calculator-container {
       width: 300px;
     }
 
@@ -407,8 +531,19 @@ table {
       grid-template-areas: 
         "navbar-container" 
         "title-container"
-        "personal-information-section"
-        "holidays-section"
+        "first-main-section"
+        "second-main-section"
+        "footer";
+    }
+
+    .second-grid-container {
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas: 
+        "navbar-container" 
+        "title-container"
+        "main-section"
+        "main-section"
         "footer";
     }
   
@@ -423,6 +558,10 @@ table {
       align-items: center;
       justify-content: space-between;
       background-color: #fff;
+    }
+
+    main {
+      grid-area: main-section;
     }
 
     .logo, .logo-home {
@@ -510,55 +649,17 @@ table {
     .homework-section-container.visible, .tests-section-container.visible {
       display: block; 
       background: none;
-    }
-    
-    .homework-section-container:not(.visible), .tests-section-container:not(.visible){
-      display: none; 
     }    
+
+    .contacts-grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: 
+      "first-profile"
+      "second-profile"
+      "third-profile"
+      "fourth-profile";
+    }
 }
-/* 480px and 800px  */
-@media only screen and (min-width: 35em) and (max-width: 50em) {
-  .grid-container {
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: 
-    "title-container third-column-bar-container"
-    "personal-information-section homework-section-container"
-    "holidays-section tests-section-container"
-    "footer empty";
-  }
 
-  .logo-container,
-  .menu-container,
-  .btn-container{
-    display: none;
-  }
-
-  .homework-section-container {
-    min-width: 20rem;
-  }
-
-  .hamburger-menu-tablet {
-    display: block;
-  }
-
-  .popup-menu-tablet {
-    position: absolute;
-    top: 52px;
-    background: #fff;
-  }
-  
-  .popup-menu-tablet li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    color: #737373;
-    border-bottom: 1px solid #F7EDF5;
-    text-align: center;
-  }
-
-  .popup-menu-tablet li:hover {
-    border-bottom: 1px solid #E052E0
-  }
-}

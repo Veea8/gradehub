@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">      
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-body second-grid-container">
+    <div class="navbar-container">
+        <div class="navbar">
+            <img src="svg\menu.svg" class="hamburger-menu" alt="menu icon">
+            <h1 class="logo logo-home">GradeHub</h1>
+            <img class="notification-bell" src="svg\notification.svg" alt="notificatin bell">
+            <img src="svg\profile.svg" class="profile-icon" alt="profile icon">
+
+            <ul class="popup-menu">
+                <li class="menu-home"><a href="home.html">Home</a></li>
+                <li class="menu-grades"><a href="grades.html">Grades</a></li>
+                <li class="menu-calculator"><a href="calculator.html">Calculator</a></li>
+                <li class="menu-contacts"><a href="contacts.html">Contacts</a></li>
+                <li class="menu-contacts"><a href="index.html">SIGN OUT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="logo-container white-background">
+        <h1 class="logo margin logo-home">GradeHub</h1>
+    </div>
+    <div class="menu-container white-background">
+        <ul class="menu">
+            <li class="menu-home"><a href="home.html">Home</a></li>
+            <li class="menu-grades"><a href="grades.html">Grades</a></li>
+            <li class="menu-calculator"><a href="calculator.html">Calculator</a></li>
+            <li class="menu-contacts"><a href="contacts.html">Contacts</a></li>
+        </ul>
+    </div>
+    <div class="btn-container white-background"> 
+        <a class="btn sign-out-btn margin" href="index.html">SIGN OUT</a>
+    </div>
+
+    <div class="title-container">
+        <h1 class="head-title margin">Grade Calculator</h1>
+    </div>
+    <main>
+        <form>
+            <div class="calculator-container container">
+                <label for="subject-select">Select the subject you want to calculate your required grade for</label>
+                <select>
+                    <option value="Art">Art</option>
+                </select>
+                <label for="current-grade">Your current grade</label>
+                <input type="text" value="5.60" readonly>
+                <label for="desired-grade">Enter your desired grade</label>
+                <input type="text" value="5.75" readonly>
+                <label for="required-grade">Required grade</label>
+                <input type="text" value="5.90" readonly>
+            </div>
+        </form>     
+    </main>    
+    <footer>
+        <p class="margin">Created with ♥ by Vanessa</p>
+    </footer>
+
+    <div class="third-column-bar-container white-background">        
+        <div class="third-column-bar margin">
+            <img class="notification-bell" src="svg\notification.svg" alt="notificatin bell">
+            <img src="img\profile.png" class="img-profile-picture" alt="profile picture">
+            <p class="subheading" id="profile-name">User</p>  
+        </div>
+    </div>
+    <div class="homework-section-container white-background">
+            <section class="homework-section margin">
+            <h2 class="subheading">Homework</h2>
+            <ul class="homework-list">
+                <li>Finish book</li>
+                <li>Drawing</li>
+                <li>Class notes</li>
+                <li>Essay</li>
+            </ul>
+        </section>
+    </div>
+    <div class="tests-section-container white-background">
+        <section class="tests-section margin ">
+            <h2 class="subheading">Tests</h2>
+            <ul class="tests-list">
+                <li>Energy</li>
+                <li>Geophysics</li>
+                <li>Magnetism</li>
+                <li>Forces</li>
+            </ul>
+        </section>
+    </div>
+    <div class="homework-section-container homework-section-container-popup white-background">
+        <section class="homework-section margin">
+        <h2 class="subheading">Homework</h2>
+        <ul class="homework-list">
+            <li>Finish book</li>
+            <li>Drawing</li>
+            <li>Class notes</li>
+            <li>Essay</li>
+        </ul>
+    </section>
+    </div>
+    <div class="tests-section-container tests-section-container-popup white-background">
+        <section class="tests-section margin ">
+            <h2 class="subheading">Tests</h2>
+            <ul class="tests-list">
+                <li>Energy</li>
+                <li>Geophysics</li>
+                <li>Magnetism</li>
+                <li>Forces</li>
+            </ul>
+        </section>
+    </div>
+    <div class="empty white-background"></div>
+    <script src="script.js"></script>
+</body>
+</html>
