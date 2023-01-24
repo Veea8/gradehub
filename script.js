@@ -40,4 +40,4 @@ var holidaysCountdown = setInterval(()=> {
 //get username and update title
 var url = new URL(window.location.href);
 var username = url.searchParams.get("username");
-document.getElementById("welcome-name").innerHTML = document.getElementById("profile-name").innerHTML = document.getElementById("personal-information-name").innerHTML = username;
+document.getElementById("welcome-name").innerHTML = document.getElementById("welcome-name").innerHTML = document.getElementById("personal-information-name").innerHTML = username;
